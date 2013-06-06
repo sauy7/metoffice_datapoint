@@ -303,19 +303,30 @@ Full-Width Styles
 
 #header_wrap .inner {
   padding: 50px 10px 30px 10px;
+  position: relative;
+}
+
+#logo {
+  border: none;
+  box-shadow: none;
+  height: 150px;
+  left: -150px;
+  position: absolute;
+  top: 0;
+  width: 150px;
 }
 
 #project_title {
   margin: 0;
   color: #fff;
-  font-size: 42px;
+  font-size: 34px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
 }
 
 #project_tagline {
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;

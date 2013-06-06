@@ -12,25 +12,64 @@
   </head>
 
   <body>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
+          <img alt="" src="images/weather-logo.png" id="logo">
           <a id="forkme_banner" href="https://github.com/sauy7/metoffice_datapoint">View on GitHub</a>
 
           <h1 id="project_title">Met Office DataPoint API Ruby Gem</h1>
-          <h2 id="project_tagline">A simple Ruby gem wrapper for the UK's Met Office DataPoint API</h2>
+          <h2 id="project_tagline">A simple Ruby gem wrapper for the UK Met Office's DataPoint API</h2>
 
-            <!--section id="downloads">
+            <section id="downloads">
               <a class="zip_download_link" href="https://github.com/sauy7/metoffice_datapoint/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/sauy7/metoffice_datapoint/tarball/master">Download this project as a tar.gz file</a>
-            </section-->
+            </section>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+          <h3>Introduction</h3>
+          <p>
+              This gem aims to provide a simple wrapper to the <a href="http://www.metoffice.gov.uk/datapoint/support/about">UK Met Office's DataPoint API</a>.
+          </p>
+          <p>
+              To use this gem, you will need to <a href="https://register.metoffice.gov.uk/WaveRegistrationClient/public/newaccount.do?service=datapoint">register with the Met Office</a>
+              to obtain an API Key.
+          </p>
+          <p>
+              This gem is <b>unofficial</b>. It is not developed nor supported by the
+              <a href="http://www.metoffice.gov.uk">Met Office</a>.
+          </p>
+          <p>
+              Use of this gem must still comply with the Met Office's DataPoint
+              <a href="http://www.metoffice.gov.uk/datapoint/support/terms-conditions">Terms and conditions</a> and
+              <a href="http://www.metoffice.gov.uk/about-us/legal/fair-usage">Fair Use Policy</a>.
+          </p>
+
+          <h3>Development status</h3>
+          <p>
+              This gem is at the very early stages of development but has the intended goal of the project to fully
+              support all endpoints listed in the <a href="http://www.metoffice.gov.uk/datapoint/api">API documentation</a>.
+          </p>
+
+          <h3>Installation</h3>
+          <p>
+              Until a useful minimum viable level of functionality has been developed, this gem will only be available
+              from GitHub. If using Bundler, add the following line to your project's:
+          </p>
+
+          <pre><code>gem 'metoffice_datapoint', github: 'sauy7/metoffice_datapoint'</code></pre>
+
+          <h3>Contributing</h3>
+
+          <p>
+              Instructions on contributing to this project will be added in due course. If you have an interest in
+              contributing, please contact the maintainer through <a href="https://twitter.com/sauy7">Twitter (sauy7)</a>.
+          </p>
+        <!-- ORIGINAL CONTENT
         <h3>
             <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.
         </h3>
@@ -67,6 +106,7 @@
         </h3>
 
         <p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+        -->
       </section>
     </div>
 
