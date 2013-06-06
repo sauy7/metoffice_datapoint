@@ -1,8 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.unshift File.expand_path('..', __FILE__)
 $:.unshift File.expand_path('../../lib', __FILE__)
-require 'simplecov'
-SimpleCov.start
+if ENV['COVERAGE']
+  require 'simplecov'
+  SimpleCov.start
+end
 require 'minitest/autorun'
 require 'minitest/focus'
 require 'minitest/metadata'
@@ -11,6 +13,13 @@ require 'vcr'
 require 'addressable/uri'
 require 'metoffice_datapoint'
 require 'api_key'
+
+if ENV['RM_INFO']
+  require 'minitest/reporters'
+  MiniTest::Reporters.use!
+else
+  require 'minitest/wscolor'
+end
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/fixtures/cassette_library'
