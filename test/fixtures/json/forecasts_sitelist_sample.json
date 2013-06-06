@@ -1,0 +1,18 @@
+{
+    "Locations": {
+        "Location": [
+            {
+                "id":"3094",
+                "latitude":"57.698",
+                "longitude":"-2.121",
+                "name":"Rosehearty Samos"
+            },
+            {
+                "id":"3144",
+                "latitude":"56.326",
+                "longitude":"-3.729",
+                "name":"Strathallan"
+            }
+        ]
+    }
+}
