@@ -1,4 +1,6 @@
 # -*- encoding: utf-8 -*-
+
+
 module MetofficeDatapoint
   module Configuration
     VALID_OPTIONS_KEYS = [

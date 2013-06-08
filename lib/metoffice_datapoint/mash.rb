@@ -1,43 +1,40 @@
 # -*- encoding: utf-8 -*-
-require 'hashie'
-require 'multi_json'
+require 'hashie/mash'
+require 'oj'
 
 module MetofficeDatapoint
   # Public: Provides pseudo-objects (a Hashie::Mash) representing the responses from the Met Office DataPoint API.
+  #
+  # Warning: The conversion process is slow for large objects. It is not recommended to use this class on responses
+  #   from requests to the API returning data for all locations.
   class Mash < ::Hashie::Mash
-    # Public: A simple helper to convert a json string into a Hashie::Mash.
-    #
-    # json_string - a String of JSON, typically returned from the Met Office DataPoint API.
-    #
-    # Returns a Mash representation of the input json string.
-    def self.from_json(json_string)
-      result_hash = ::MultiJson.decode json_string
-      new result_hash
-    end
-
     protected
 
-    # Protected: Convert CamelCase keys to lower-cased with underscores.
-    #   "Borrowed" from Rash (see https://github.com/tcocca/rash).
+    # Protected: Convert keys to a more rubyesque style (underscroce, lowercase). Excludes keys with specific meanings.
     #   Overloads the the convert_key Mash method.
     #
-    # key - String, possibly containing CamelCase words, Ruby namespacing '::' and/or dash-es
+    # key - String, possibly containing CamelCase words and/or dash-es
     #
     # Examples:
-    #   convert_key("CamelCase::Base") => camel_case/base
     #   convert_key("CamelCase") => camel_case
     #   convert_key("dash-es") => dash_es
     #
-    # Returns String based on underscore and forward-slash separators.
+    # Returns String based on lowercase letters and an underscore for separation.
     def convert_key(key)
-      word = key.to_s.strip.
-          gsub(' ', '_').
-          gsub(/::/, '/').
-          gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
-          gsub(/([a-z\d])([A-Z])/,'\1_\2').
-          tr("-", "_").
-          squeeze("_").
-          downcase
+      case key
+        when '$'
+          'text'
+        when 'D', 'Dm', 'F', 'FDm', 'FNm', 'G', 'Gm', 'Gn', 'H', 'Hm', 'Hn', 'Nm', 'P', 'Pp', 'PPd', 'PPn', 'S', 'T', 'U', 'V', 'W'
+          key
+        else
+          key.to_s.strip.
+              gsub(' ', '_').
+              gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+              gsub(/([a-z\d])([A-Z])/,'\1_\2').
+              tr("-", "_").
+              squeeze("_").
+              downcase
+      end
     end
 
     # Protected: Unlike its parent Mash, this Mash will convert other Hashie::Hash values to a Mash when assigning

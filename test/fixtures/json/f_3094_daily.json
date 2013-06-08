@@ -1,0 +1,52 @@
+{
+    "SiteRep": {
+        "Wx": {
+            "Param": [
+                {"name":"FDm","units":"C","$":"Feels Like Day Maximum Temperature"},
+                {"name":"Dm","units":"C","$":"Day Maximum Temperature"},
+                {"name":"FNm","units":"C","$":"Feels Like Night Minimum Temperature"},
+                {"name":"Nm","units":"C","$":"Night Minimum Temperature"},
+                {"name":"Gn","units":"mph","$":"Wind Gust Noon"},
+                {"name":"Gm","units":"mph","$":"Wind Gust Midnight"},
+                {"name":"Hn","units":"%","$":"Screen Relative Humidity Noon"},
+                {"name":"Hm","units":"%","$":"Screen Relative Humidity Midnight"},
+                {"name":"V","units":"","$":"Visibility"},
+                {"name":"D","units":"compass","$":"Wind Direction"},
+                {"name":"S","units":"mph","$":"Wind Speed"},
+                {"name":"U","units":"","$":"Max UV Index"},
+                {"name":"W","units":"","$":"Weather Type"},
+                {"name":"PPd","units":"%","$":"Precipitation Probability Day"},
+                {"name":"PPn","units":"%","$":"Precipitation Probability Night"}
+            ]
+        },
+        "DV": {
+            "dataDate":"2013-06-07T19:00:00Z",
+            "type":"Forecast",
+            "Location": {
+                "i":"3094",
+                "lat":"57.698",
+                "lon":"-2.121",
+                "name":"ROSEHEARTY SAMOS",
+                "country":"SCOTLAND",
+                "continent":"EUROPE",
+                "Period": [
+                    {"type":"Day","value":"2013-06-07Z","Rep": [
+                            {"D":"NW","Gn":"13","Hn":"77","PPd":"3","S":"4","V":"VG","Dm":"15","FDm":"14","W":"1","U":"4","$":"Day"},
+                            {"D":"N","Gm":"7","Hm":"99","PPn":"15","S":"4","V":"PO","Nm":"9","FNm":"8","W":"5","$":"Night"}]},
+                    {"type":"Day","value":"2013-06-08Z","Rep":[
+                        {"D":"NNW","Gn":"13","Hn":"82","PPd":"15","S":"7","V":"GO","Dm":"12","FDm":"11","W":"7","U":"4","$":"Day"},
+                        {"D":"SE","Gm":"9","Hm":"94","PPn":"6","S":"4","V":"MO","Nm":"9","FNm":"8","W":"7","$":"Night"}]},
+                    {"type":"Day","value":"2013-06-09Z","Rep":[
+                        {"D":"ESE","Gn":"18","Hn":"68","PPd":"6","S":"9","V":"VG","Dm":"15","FDm":"14","W":"1","U":"4","$":"Day"},
+                        {"D":"SE","Gm":"18","Hm":"95","PPn":"4","S":"11","V":"GO","Nm":"9","FNm":"6","W":"7","$":"Night"}]},
+                    {"type":"Day","value":"2013-06-10Z","Rep":[
+                        {"D":"SE","Gn":"22","Hn":"65","PPd":"4","S":"13","V":"VG","Dm":"14","FDm":"12","W":"3","U":"3","$":"Day"},
+                        {"D":"SE","Gm":"20","Hm":"91","PPn":"4","S":"13","V":"GO","Nm":"9","FNm":"6","W":"7","$":"Night"}]},
+                    {"type":"Day","value":"2013-06-11Z","Rep":[
+                        {"D":"SE","Gn":"27","Hn":"69","PPd":"10","S":"16","V":"VG","Dm":"14","FDm":"11","W":"7","U":"3","$":"Day"},
+                        {"D":"SE","Gm":"27","Hm":"92","PPn":"19","S":"18","V":"GO","Nm":"10","FNm":"7","W":"7","$":"Night"}]}
+                ]
+            }
+        }
+    }
+}

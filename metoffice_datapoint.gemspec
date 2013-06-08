@@ -20,18 +20,16 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'addressable', '~> 2.3.4'
   spec.add_dependency 'hashie', '~> 2.0.5'
-  spec.add_dependency 'multi_json', '~> 1.7.6'
+  spec.add_dependency 'oj', '~> 2.0.14'
   spec.add_dependency 'rest-client', '~> 1.6.7'
 
   spec.add_development_dependency 'bundler', '~> 1.3.5'
   spec.add_development_dependency 'rake', '~> 10.0.4'
   spec.add_development_dependency 'minitest', '~> 4.7.4'
   spec.add_development_dependency 'minitest-focus', '~> 1.0.0'
-  spec.add_development_dependency 'minitest-metadata', '~> 0.4.0'
   spec.add_development_dependency 'minitest-reporters', '~> 0.14.20'
   spec.add_development_dependency 'minitest-wscolor', '~> 0.0.3'
   spec.add_development_dependency 'simplecov', '~> 0.7.1'
   spec.add_development_dependency 'tomdoc', '~> 0.2.5'
   spec.add_development_dependency 'webmock', '~> 1.11.0'
-  spec.add_development_dependency 'vcr', '~> 2.5.0'
 end

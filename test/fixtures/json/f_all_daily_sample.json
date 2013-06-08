@@ -1,0 +1,31 @@
+{
+  "SiteRep": {
+    "Wx": {
+      "Param": [
+        {"name":"FDm","units":"C","$":"Feels Like Day Maximum Temperature"},
+        {"name":"Dm","units":"C","$":"Day Maximum Temperature"},
+        {"name":"FNm","units":"C","$":"Feels Like Night Minimum Temperature"},
+        {"name":"Nm","units":"C","$":"Night Minimum Temperature"},
+        {"name":"Gn","units":"mph","$":"Wind Gust Noon"},
+        {"name":"Gm","units":"mph","$":"Wind Gust Midnight"},
+        {"name":"Hn","units":"%","$":"Screen Relative Humidity Noon"},
+        {"name":"Hm","units":"%","$":"Screen Relative Humidity Midnight"},
+        {"name":"V","units":"","$":"Visibility"},
+        {"name":"D","units":"compass","$":"Wind Direction"},
+        {"name":"S","units":"mph","$":"Wind Speed"},
+        {"name":"U","units":"","$":"Max UV Index"},
+        {"name":"W","units":"","$":"Weather Type"},
+        {"name":"PPd","units":"%","$":"Precipitation Probability Day"},
+        {"name":"PPn","units":"%","$":"Precipitation Probability Night"}
+      ]
+    },
+    "DV": {
+      "dataDate":"2013-06-07T19:00:00Z",
+      "type":"Forecast",
+      "Location": [
+        {"i":"22","lat":"53.5797","lon":"-0.3472","name":"HUMBERSIDE AIRPORT","country":"ENGLAND","continent":"EUROPE","Period":[{"type":"Day","value":"2013-06-07Z","Rep":[{"D":"ENE","Gn":"25","Hn":"64","PPd":"0","S":"13","V":"VG","Dm":"15","FDm":"13","W":"1","U":"5","$":"Day"},{"D":"NNE","Gm":"9","Hm":"96","PPn":"14","S":"4","V":"MO","Nm":"7","FNm":"6","W":"0","$":"Night"}]},{"type":"Day","value":"2013-06-08Z","Rep":[{"D":"NE","Gn":"22","Hn":"71","PPd":"14","S":"11","V":"VG","Dm":"15","FDm":"12","W":"1","U":"5","$":"Day"},{"D":"NE","Gm":"13","Hm":"94","PPn":"12","S":"4","V":"MO","Nm":"8","FNm":"7","W":"7","$":"Night"}]},{"type":"Day","value":"2013-06-09Z","Rep":[{"D":"NE","Gn":"22","Hn":"74","PPd":"12","S":"11","V":"VG","Dm":"15","FDm":"11","W":"7","U":"4","$":"Day"},{"D":"NE","Gm":"13","Hm":"87","PPn":"15","S":"4","V":"GO","Nm":"8","FNm":"8","W":"8","$":"Night"}]},{"type":"Day","value":"2013-06-10Z","Rep":[{"D":"E","Gn":"13","Hn":"69","PPd":"15","S":"4","V":"VG","Dm":"15","FDm":"12","W":"7","U":"4","$":"Day"},{"D":"SE","Gm":"13","Hm":"90","PPn":"2","S":"7","V":"GO","Nm":"8","FNm":"6","W":"0","$":"Night"}]},{"type":"Day","value":"2013-06-11Z","Rep":[{"D":"SSE","Gn":"22","Hn":"63","PPd":"42","S":"11","V":"VG","Dm":"18","FDm":"14","W":"7","U":"3","$":"Day"},{"D":"S","Gm":"22","Hm":"88","PPn":"33","S":"13","V":"GO","Nm":"13","FNm":"12","W":"7","$":"Night"}]}]},
+        {"i":"25","lat":"53.8658","lon":"-1.6606","name":"LEEDS BRADFORD INTERNATIONAL AIRPORT","country":"ENGLAND","continent":"EUROPE","Period":[{"type":"Day","value":"2013-06-07Z","Rep":[{"D":"E","Gn":"18","Hn":"60","PPd":"0","S":"7","V":"VG","Dm":"19","FDm":"16","W":"1","U":"5","$":"Day"},{"D":"E","Gm":"11","Hm":"78","PPn":"4","S":"4","V":"GO","Nm":"9","FNm":"8","W":"7","$":"Night"}]},{"type":"Day","value":"2013-06-08Z","Rep":[{"D":"ENE","Gn":"18","Hn":"59","PPd":"4","S":"7","V":"VG","Dm":"17","FDm":"15","W":"3","U":"5","$":"Day"},{"D":"ESE","Gm":"9","Hm":"84","PPn":"1","S":"2","V":"GO","Nm":"8","FNm":"8","W":"0","$":"Night"}]},{"type":"Day","value":"2013-06-09Z","Rep":[{"D":"ENE","Gn":"18","Hn":"64","PPd":"5","S":"7","V":"VG","Dm":"17","FDm":"14","W":"1","U":"4","$":"Day"},{"D":"ESE","Gm":"13","Hm":"90","PPn":"8","S":"4","V":"GO","Nm":"7","FNm":"7","W":"2","$":"Night"}]},{"type":"Day","value":"2013-06-10Z","Rep":[{"D":"SE","Gn":"16","Hn":"71","PPd":"10","S":"7","V":"VG","Dm":"16","FDm":"14","W":"3","U":"4","$":"Day"},{"D":"SE","Gm":"13","Hm":"80","PPn":"3","S":"7","V":"VG","Nm":"8","FNm":"8","W":"0","$":"Night"}]},{"type":"Day","value":"2013-06-11Z","Rep":[{"D":"SSE","Gn":"25","Hn":"64","PPd":"36","S":"11","V":"VG","Dm":"17","FDm":"13","W":"7","U":"3","$":"Day"},{"D":"SSE","Gm":"20","Hm":"92","PPn":"39","S":"11","V":"MO","Nm":"12","FNm":"11","W":"9","$":"Night"}]}]}
+      ]
+    }
+  }
+}
