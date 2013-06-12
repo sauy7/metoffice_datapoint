@@ -1,7 +1,6 @@
 # This file is used to collect a variety of test data from the Met Office DataPoint API.
 
 require 'restclient'
-require 'date'
 require_relative '../../api_key'
 
 base_uri = 'http://datapoint.metoffice.gov.uk/public/data/'
@@ -14,6 +13,8 @@ hourly = "&res=hourly"
 # The following should be adjusted
 timestep = "2013-06-08T00:00:00Z"
 timestep_filename = timestep.gsub("-", '_').gsub(':', '_')
+
+
 
 ##########################
 # Location Forecast Data #
@@ -96,6 +97,8 @@ File.open('f_3094_3hourly.json', 'w') { |f|
   }
 }
 
+
+
 #############################
 # Location Observation Data #
 #############################
@@ -131,6 +134,79 @@ File.open('o_all_hourly.json', 'w') { |f|
 
 File.open('o_3002_hourly.json', 'w') { |f|
   uri = "#{base_uri}#{o_id}#{q_string}#{hourly}"
+  puts uri
+  RestClient.get(uri) { |response, request, headers|
+    f.write(response.to_str)
+  }
+}
+
+
+
+#############
+# Text Data #
+#############
+
+endpoints = {
+    'o_ukextremes_capabilities'   => 'txt/wxobs/ukextremes/json/capabilities',
+    'o_ukextremes_latest'         => 'txt/wxobs/ukextremes/json/latest',
+    'f_nationalpark_sitelist'     => 'txt/wxfcs/nationalpark/json/sitelist',
+    'f_nationalpark_capabilities' => 'txt/wxfcs/nationalpark/json/capabilities',
+    'f_nationalpark_all' => 'txt/wxfcs/nationalpark/json/all',
+    'f_nationalpark_600' => 'txt/wxfcs/nationalpark/json/600',
+    'f_regional_sitelist' => 'txt/wxfcs/regionalforecast/json/sitelist',
+    'f_regional_capabilities' => 'txt/wxfcs/regionalforecast/json/capabilities',
+    'f_regional_500' => 'txt/wxfcs/regionalforecast/json/500',
+    'f_mountainarea_sitelist' => 'txt/wxfcs/mountainarea/json/sitelist',
+    'f_mountainarea_capabilities' => 'txt/wxfcs/mountainarea/json/capabilities',
+    'f_mountainarea_100' => 'txt/wxfcs/mountainarea/json/100'
+}
+
+endpoints.each do |file, path|
+  File.open("#{file}.json", 'w') { |f|
+    uri = "#{base_uri}#{path}#{q_string}"
+    puts uri
+    RestClient.get(uri) { |response, request, headers|
+      f.write(response.to_str)
+    }
+  }
+end
+
+
+
+################
+# Map Overlays #
+################
+
+endpoint = 'http://datapoint.metoffice.gov.uk/public/data/layer/wxfcs/all/json/capabilities'
+
+File.open("f_layer.json", 'w') { |f|
+  uri = "#{endpoint}#{q_string}"
+  puts uri
+  RestClient.get(uri) { |response, request, headers|
+    f.write(response.to_str)
+  }
+}
+
+endpoint = 'http://datapoint.metoffice.gov.uk/public/data/layer/wxobs/all/json/capabilities'
+
+File.open("o_layer.json", 'w') { |f|
+  uri = "#{endpoint}#{q_string}"
+  puts uri
+  RestClient.get(uri) { |response, request, headers|
+    f.write(response.to_str)
+  }
+}
+
+
+
+###################
+# Standalone Maps #
+###################
+
+endpoint = 'http://datapoint.metoffice.gov.uk/public/data/image/wxfcs/surfacepressure/json/capabilities'
+
+File.open("standalone.json", 'w') { |f|
+  uri = "#{endpoint}#{q_string}"
   puts uri
   RestClient.get(uri) { |response, request, headers|
     f.write(response.to_str)

@@ -28,6 +28,7 @@ module MetofficeDatapoint
           key
         else
           key.to_s.strip.
+              gsub('@', '').
               gsub(' ', '_').
               gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
               gsub(/([a-z\d])([A-Z])/,'\1_\2').
@@ -49,7 +50,9 @@ module MetofficeDatapoint
     #   convert_value(#<::Hash ...>) => Mash.new(#<::Hash ...>)
     #   convert_value("my string") => "my string"
     #   convert_value("2013-06-10T12:00:00Z") => #<DateTime: 2013-06-10T12:00:00Z ...>
+    #   convert_value("2013-06-10T12:00:00") => #<DateTime: 2013-06-10T12:00:00Z ...>
     #   convert_value("2013-06-10Z") => #<Date: 2013-06-10 ...>
+    #   convert_value("2013-06-10") => #<Date: 2013-06-10 ...>
     #
     # Returns Objects of different types, depending on the original val passed in.
     def convert_value(val, duping=false) #:nodoc:
@@ -64,9 +67,9 @@ module MetofficeDatapoint
         else
           if val.class == String
             begin
-              datetime_regexp = /^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}T[[:digit:]]{2}:[[:digit:]]{2}:[[:digit:]]{2}Z$/
+              datetime_regexp = /^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}T[[:digit:]]{2}:[[:digit:]]{2}:[[:digit:]]{2}Z?$/
               return DateTime.parse(val) if datetime_regexp.match(val)
-              date_regexp = /^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}Z$/
+              date_regexp = /^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}Z?$/
               return Date.parse(val) if date_regexp.match(val)
             rescue
               # no Date or DateTime found, keep calm and carry on

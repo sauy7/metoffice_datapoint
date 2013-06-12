@@ -6,6 +6,9 @@ require 'metoffice_datapoint/request'
 module MetofficeDatapoint
   class Client
     include Api::LocationMethods
+    include Api::MapOverlayMethods
+    include Api::StandaloneMapsMethods
+    include Api::TextMethods
     include MetofficeDatapoint::Request
 
     attr_accessor(*Configuration::VALID_OPTIONS_KEYS)
