@@ -13,7 +13,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns the regional observed extremes of weather across the UK for the day of issue. API is
-      #   updated daily.
+      # updated daily.
       #
       # Returns a Hash.
       def ukextremes_latest_observations
@@ -21,7 +21,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns a list of locations the National Park forecast data feed provides data for. You can use this to
-      #   find the ID of the site that you are interested in.
+      # find the ID of the site that you are interested in.
       #
       # Returns a Hash.
       def nationalparks_sitelist
@@ -29,7 +29,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns when the data for each of the National Park forecasts was updated. You can use this to check
-      #   when the forecasts have updated rather than fetching the National Park forecasts repeatedly.
+      # when the forecasts have updated rather than fetching the National Park forecasts repeatedly.
       #
       # Returns a Hash.
       def nationalparks_capabilities
@@ -37,7 +37,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns a text forecast for a National Park. API is updated twice daily, early morning and early
-      #   afternoon.
+      # afternoon.
       #
       # Returns a Hash.
       def nationalparks_forecasts(location_id='all')
@@ -45,7 +45,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns a list of locations the regional forecast data feed provides data for. You can use this to find
-      #   the ID of the site that you are interested in.
+      # the ID of the site that you are interested in.
       #
       # Returns a Hash.
       def regional_sitelist
@@ -53,7 +53,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns when the regional forecast was updated. You can use this to check when the forecasts have
-      #   updated rather than fetching the regional forecasts repeatedly.
+      # updated rather than fetching the regional forecasts repeatedly.
       #
       # Returns a Hash.
       def regional_capabilities
@@ -61,7 +61,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns regional forecast text. API is updated twice daily, AM and PM, normally early morning and early
-      #   afternoon.
+      # afternoon.
       #
       # location_id - An Integer corresponding to a region.
       #
@@ -71,7 +71,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns a list of locations the mountain area forecast data feed provides data for. You can use this to
-      #   find the ID of the site that you are interested in.
+      # find the ID of the site that you are interested in.
       #
       # Returns a Hash.
       def mountain_area_sitelist
@@ -79,7 +79,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns the forecast creation dates, valid from and to dates, and the general risk for each mountain
-      #   area.
+      # area.
       #
       # Returns a Hash.
       def mountain_area_capabilities
@@ -87,7 +87,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns a mountain area forecast covering the four day period after its issue date. API is updated at
-      #   least once a day but may be updated more often.
+      # least once a day but may be updated more often.
       #
       # location_id - An Integer corresponding to a mountain area.
       #

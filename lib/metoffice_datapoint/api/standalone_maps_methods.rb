@@ -6,7 +6,7 @@ module MetofficeDatapoint
     # Public: Wrapper class around the Met Office DataPoint API endpoints
     module StandaloneMapsMethods
       # Public: Returns when the current surface pressure charts were issued, the time steps available, and the URIs of
-      #   the surface pressure synoptic analysis and forecast charts in GIF format. API is updated twice daily.
+      # the surface pressure synoptic analysis and forecast charts in GIF format. API is updated twice daily.
       #
       # Returns a Hash.
       def surface_pressure_map

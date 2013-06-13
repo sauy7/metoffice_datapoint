@@ -6,7 +6,7 @@ module MetofficeDatapoint
     # Public: Wrapper class around the Met Office DataPoint API endpoints
     module MapOverlayMethods
       # Public: Returns when the forecast layers were issued, time steps available, and the URIs of the layers in PNG
-      #   format. API updates hourly.
+      # format. API updates hourly.
       #
       # Returns a Hash.
       def forecast_layer
@@ -14,7 +14,7 @@ module MetofficeDatapoint
       end
 
       # Public: Returns when the observation layers were issued, time steps available, and the URIs of the layers in
-      #   PNG format. API updates every 15 minutes.
+      # PNG format. API updates every 15 minutes.
       #
       # Returns a Hash.
       def observation_layer

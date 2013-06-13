@@ -1,0 +1,1 @@
+rdoc --markup tomdoc --write-options

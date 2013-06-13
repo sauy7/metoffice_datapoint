@@ -11,7 +11,7 @@ module MetofficeDatapoint
     protected
 
     # Protected: Convert keys to a more rubyesque style (underscroce, lowercase). Excludes keys with specific meanings.
-    #   Overloads the the convert_key Mash method.
+    # Overloads the the convert_key Mash method.
     #
     # key - String, possibly containing CamelCase words and/or dash-es
     #
@@ -39,9 +39,9 @@ module MetofficeDatapoint
     end
 
     # Protected: Unlike its parent Mash, this Mash will convert other Hashie::Hash values to a Mash when assigning
-    #   instead of respecting the existing subclass. Also converts Strings parseable by Date(Time).parse to Date(Time)
-    #   objects.
-    #   Overloads the the convert_value Mash method.
+    # instead of respecting the existing subclass. Also converts Strings parseable by Date(Time).parse to Date(Time)
+    # objects.
+    # Overloads the the convert_value Mash method.
     #
     # val - Object to be converted.
     #
