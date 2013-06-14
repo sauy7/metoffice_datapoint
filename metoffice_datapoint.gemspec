@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tim Heighes"]
   spec.email         = ["tim@heighes.com"]
   spec.description   = %q{Simple wrapper for the Met Office DataPoint API}
-  spec.summary       = %q{An unofficial wrapper}
+  spec.summary       = %q{An unofficial wrapper for the UK Met Office's DataPoint API}
   spec.homepage      = "https://github.com/sauy7/metoffice_datapoint"
   spec.license       = "MIT"
 
