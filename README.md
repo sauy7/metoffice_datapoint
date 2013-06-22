@@ -6,4 +6,4 @@ Simple wrapper for the [Met Office DataPoint API](http://www.metoffice.gov.uk/da
 
 See the [project home page](http://sauy7.github.io/metoffice_datapoint/) for further details.
 
-[![Build Status](https://travis-ci.org/sauy7/metoffice_datapooint.png)](https://travis-ci.org/sauy7/metoffice_datapoint)
+[![Build Status](https://travis-ci.org/sauy7/metoffice_datapoint.png)](https://travis-ci.org/sauy7/metoffice_datapoint)
