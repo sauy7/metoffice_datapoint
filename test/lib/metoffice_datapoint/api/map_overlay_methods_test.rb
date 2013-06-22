@@ -3,7 +3,7 @@ require_relative '../../../test_helper'
 
 describe MetofficeDatapoint::Api::MapOverlayMethods do
   before do
-    @client = MetofficeDatapoint.new(api_key: MODP_API_KEY)
+    @client = MetofficeDatapoint.new(api_key: ENV['MODP_API_KEY'])
   end
 
   describe "map overlays" do
