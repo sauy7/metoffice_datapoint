@@ -1,6 +1,14 @@
+---
 language: ruby
 rvm:
-  - "1.9.2"
-  - "1.9.3"
-  - "2.0.0"
-  - rbx-19mode
+- 1.9.2
+- 1.9.3
+- 2.0.0
+- rbx-19mode
+env:
+  matrix:
+    secure: ! 'U9L5/ClGdhfLJwYMn8YhKaUZ19LlEKoGP5TUbOM9yPibhWcWDT6JdssVTNJB
+
+      KprwyOjvMr2P35aaE8ldbrMlJX36ssEMon/OppXTkAmEnpLTRoLukaShHKPI
+
+      Xy3wOUWmc5KJwrRFfFPjRWTm9vqpmP0xHJMUidMVwUPKo0QL6EM='

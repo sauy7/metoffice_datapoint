@@ -10,7 +10,11 @@ require 'minitest/focus'
 require 'webmock/minitest'
 require 'addressable/uri'
 require 'metoffice_datapoint'
-require 'api_key'
+if File.exists?(File.join(File.dirname(__FILE__), 'api_key.rb'))
+  require 'api_key'
+else
+  puts "Running without api_key.rb. Make sure ENV['MODP_API_KEY'] is set."
+end
 
 if ENV['RM_INFO']
   require 'minitest/reporters'
