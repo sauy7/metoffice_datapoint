@@ -6,7 +6,7 @@ rvm:
 - 2.0.0
 - rbx-19mode
 env:
-  matrix:
+  global:
     secure: ! 'U9L5/ClGdhfLJwYMn8YhKaUZ19LlEKoGP5TUbOM9yPibhWcWDT6JdssVTNJB
 
       KprwyOjvMr2P35aaE8ldbrMlJX36ssEMon/OppXTkAmEnpLTRoLukaShHKPI
